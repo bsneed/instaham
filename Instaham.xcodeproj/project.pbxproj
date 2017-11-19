@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6570A1121FBE23770062E458 /* InstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1111FBE23770062E458 /* InstagramTests.m */; };
+		6570A1161FC0F0CF0062E458 /* InstagramAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1151FC0F0CF0062E458 /* InstagramAuthViewController.m */; };
+		6570A11A1FC0FDC50062E458 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1191FC0FDC50062E458 /* Keychain.m */; };
+		6570A11C1FC103150062E458 /* KeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A11B1FC103150062E458 /* KeychainTests.m */; };
+		6570A1201FC118E30062E458 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A11F1FC118E30062E458 /* CoreData.m */; };
+		6570A1231FC123D30062E458 /* Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1221FC123D30062E458 /* Conversion.m */; };
+		6570A1261FC136BD0062E458 /* InstagramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1251FC136BD0062E458 /* InstagramCell.m */; };
+		6570A12A1FC13B060062E458 /* UIImageView+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1291FC13B060062E458 /* UIImageView+URL.m */; };
 		65C578DF1FBE12C5009183E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578DE1FBE12C5009183E4 /* AppDelegate.m */; };
-		65C578E21FBE12C5009183E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578E11FBE12C5009183E4 /* ViewController.m */; };
+		65C578E21FBE12C5009183E4 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578E11FBE12C5009183E4 /* FeedViewController.m */; };
 		65C578E51FBE12C5009183E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C578E31FBE12C5009183E4 /* Main.storyboard */; };
 		65C578E81FBE12C5009183E4 /* Instaham.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65C578E61FBE12C5009183E4 /* Instaham.xcdatamodeld */; };
 		65C578EA1FBE12C5009183E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C578E91FBE12C5009183E4 /* Assets.xcassets */; };
@@ -16,6 +24,8 @@
 		65C578F01FBE12C5009183E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578EF1FBE12C5009183E4 /* main.m */; };
 		65C578FA1FBE12C5009183E4 /* InstahamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578F91FBE12C5009183E4 /* InstahamTests.m */; };
 		65C579051FBE12C5009183E4 /* InstahamUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C579041FBE12C5009183E4 /* InstahamUITests.m */; };
+		65C5792E1FBE192F009183E4 /* Instagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5792D1FBE192F009183E4 /* Instagram.m */; };
+		65E4B4A51FC1659E00AE9BB0 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +46,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65526F1D1FC1628300B9384D /* Sanity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sanity.h; sourceTree = "<group>"; };
+		6570A1111FBE23770062E458 /* InstagramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramTests.m; sourceTree = "<group>"; };
+		6570A1141FC0F0CF0062E458 /* InstagramAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramAuthViewController.h; sourceTree = "<group>"; };
+		6570A1151FC0F0CF0062E458 /* InstagramAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthViewController.m; sourceTree = "<group>"; };
+		6570A1181FC0FDC50062E458 /* Keychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		6570A1191FC0FDC50062E458 /* Keychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
+		6570A11B1FC103150062E458 /* KeychainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainTests.m; sourceTree = "<group>"; };
+		6570A11E1FC118E30062E458 /* CoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
+		6570A11F1FC118E30062E458 /* CoreData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
+		6570A1211FC123D30062E458 /* Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Conversion.h; sourceTree = "<group>"; };
+		6570A1221FC123D30062E458 /* Conversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conversion.m; sourceTree = "<group>"; };
+		6570A1241FC136BD0062E458 /* InstagramCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramCell.h; sourceTree = "<group>"; };
+		6570A1251FC136BD0062E458 /* InstagramCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramCell.m; sourceTree = "<group>"; };
+		6570A1281FC13B060062E458 /* UIImageView+URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
+		6570A1291FC13B060062E458 /* UIImageView+URL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URL.m"; sourceTree = "<group>"; };
 		65C578DA1FBE12C5009183E4 /* Instaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C578DD1FBE12C5009183E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65C578DE1FBE12C5009183E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65C578E01FBE12C5009183E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		65C578E11FBE12C5009183E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65C578E01FBE12C5009183E4 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		65C578E11FBE12C5009183E4 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		65C578E41FBE12C5009183E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65C578E71FBE12C5009183E4 /* Instaham.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Instaham.xcdatamodel; sourceTree = "<group>"; };
 		65C578E91FBE12C5009183E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +78,10 @@
 		65C579001FBE12C5009183E4 /* InstahamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstahamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C579041FBE12C5009183E4 /* InstahamUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstahamUITests.m; sourceTree = "<group>"; };
 		65C579061FBE12C5009183E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C5792C1FBE192F009183E4 /* Instagram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instagram.h; sourceTree = "<group>"; };
+		65C5792D1FBE192F009183E4 /* Instagram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instagram.m; sourceTree = "<group>"; };
+		65E4B4A31FC1659E00AE9BB0 /* CommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +109,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6570A1171FC0FDAD0062E458 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				6570A1181FC0FDC50062E458 /* Keychain.h */,
+				6570A1191FC0FDC50062E458 /* Keychain.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		6570A11D1FC117BC0062E458 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6570A11E1FC118E30062E458 /* CoreData.h */,
+				6570A11F1FC118E30062E458 /* CoreData.m */,
+				6570A1211FC123D30062E458 /* Conversion.h */,
+				6570A1221FC123D30062E458 /* Conversion.m */,
+				65526F1D1FC1628300B9384D /* Sanity.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6570A1271FC13AE30062E458 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				6570A1281FC13B060062E458 /* UIImageView+URL.h */,
+				6570A1291FC13B060062E458 /* UIImageView+URL.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		65C578D11FBE12C5009183E4 = {
 			isa = PBXGroup;
 			children = (
@@ -103,10 +162,18 @@
 		65C578DC1FBE12C5009183E4 /* Instaham */ = {
 			isa = PBXGroup;
 			children = (
+				6570A1271FC13AE30062E458 /* Controls */,
+				6570A11D1FC117BC0062E458 /* Utilities */,
+				6570A1171FC0FDAD0062E458 /* Keychain */,
+				65C5792B1FBE190D009183E4 /* Networking */,
 				65C578DD1FBE12C5009183E4 /* AppDelegate.h */,
 				65C578DE1FBE12C5009183E4 /* AppDelegate.m */,
-				65C578E01FBE12C5009183E4 /* ViewController.h */,
-				65C578E11FBE12C5009183E4 /* ViewController.m */,
+				65C578E01FBE12C5009183E4 /* FeedViewController.h */,
+				65C578E11FBE12C5009183E4 /* FeedViewController.m */,
+				65E4B4A31FC1659E00AE9BB0 /* CommentViewController.h */,
+				65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */,
+				6570A1241FC136BD0062E458 /* InstagramCell.h */,
+				6570A1251FC136BD0062E458 /* InstagramCell.m */,
 				65C578E31FBE12C5009183E4 /* Main.storyboard */,
 				65C578E91FBE12C5009183E4 /* Assets.xcassets */,
 				65C578EB1FBE12C5009183E4 /* LaunchScreen.storyboard */,
@@ -121,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				65C578F91FBE12C5009183E4 /* InstahamTests.m */,
+				6570A1111FBE23770062E458 /* InstagramTests.m */,
+				6570A11B1FC103150062E458 /* KeychainTests.m */,
 				65C578FB1FBE12C5009183E4 /* Info.plist */,
 			);
 			path = InstahamTests;
@@ -133,6 +202,17 @@
 				65C579061FBE12C5009183E4 /* Info.plist */,
 			);
 			path = InstahamUITests;
+			sourceTree = "<group>";
+		};
+		65C5792B1FBE190D009183E4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				65C5792C1FBE192F009183E4 /* Instagram.h */,
+				65C5792D1FBE192F009183E4 /* Instagram.m */,
+				6570A1141FC0F0CF0062E458 /* InstagramAuthViewController.h */,
+				6570A1151FC0F0CF0062E458 /* InstagramAuthViewController.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +348,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E4B4A51FC1659E00AE9BB0 /* CommentViewController.m in Sources */,
+				6570A12A1FC13B060062E458 /* UIImageView+URL.m in Sources */,
 				65C578E81FBE12C5009183E4 /* Instaham.xcdatamodeld in Sources */,
-				65C578E21FBE12C5009183E4 /* ViewController.m in Sources */,
+				6570A11A1FC0FDC50062E458 /* Keychain.m in Sources */,
+				6570A1261FC136BD0062E458 /* InstagramCell.m in Sources */,
+				65C578E21FBE12C5009183E4 /* FeedViewController.m in Sources */,
+				6570A1231FC123D30062E458 /* Conversion.m in Sources */,
 				65C578F01FBE12C5009183E4 /* main.m in Sources */,
+				6570A1161FC0F0CF0062E458 /* InstagramAuthViewController.m in Sources */,
 				65C578DF1FBE12C5009183E4 /* AppDelegate.m in Sources */,
+				6570A1201FC118E30062E458 /* CoreData.m in Sources */,
+				65C5792E1FBE192F009183E4 /* Instagram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6570A1121FBE23770062E458 /* InstagramTests.m in Sources */,
+				6570A11C1FC103150062E458 /* KeychainTests.m in Sources */,
 				65C578FA1FBE12C5009183E4 /* InstahamTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -423,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -435,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Instaham/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hammy.Instaham;
@@ -448,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Instaham/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hammy.Instaham;
@@ -461,6 +553,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = InstahamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hammy.InstahamTests;
@@ -475,6 +568,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = InstahamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hammy.InstahamTests;
@@ -488,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = InstahamUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hammy.InstahamUITests;
@@ -501,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = InstahamUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hammy.InstahamUITests;
