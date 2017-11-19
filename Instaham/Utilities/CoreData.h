@@ -11,6 +11,10 @@
 
 @interface CoreData: NSObject
 
+/**
+ Reduces the need to go type-cast AppDelegate all over the place to get the context.
+ Also makes sure i get the same context every time.  I think that's ok, but i'm not positive.
+ */
 + (NSManagedObjectContext * _Nonnull)managedContext;
 
 @end

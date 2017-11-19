@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     webView = [[UIWebView alloc] initWithFrame: self.view.bounds];
     webView.autoresizesSubviews = YES;
@@ -41,7 +40,7 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    NSLog(@"%@", request.URL.host);
+    // NSLog(@"%@", request.URL.host);
     // handles the redirects of api.instagram.com to www.instagram.com.
     // so long as it's on instagram.com, i'm good.
     if ([request.URL.host containsString:@"instagram.com"]) {

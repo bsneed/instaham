@@ -10,6 +10,9 @@
 
 @interface UIImageView(URL)
 
+/**
+ Sets the image asynchronously via a URL.
+ */
 - (void)setImageWithURL:(NSURL * _Nonnull)url;
 
 @end

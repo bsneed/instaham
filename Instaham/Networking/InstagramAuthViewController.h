@@ -12,6 +12,9 @@ typedef void(^TokenCompletion)(void);
 
 @interface InstagramAuthViewController : UIViewController
 
+/**
+ This completion block will be called once we've received a token.
+ */
 @property TokenCompletion tokenCompletion;
 
 @end

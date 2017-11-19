@@ -10,6 +10,11 @@
 
 @interface NSObject(Conversion)
 
+/**
+ These extensions make fishing things out of dictionaries a little safer, and reduces
+ the number of 'if' statements necessar.
+ */
+
 - (NSNumber * _Nullable)numberValue;
 - (NSString * _Nullable)stringValue;
 

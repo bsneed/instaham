@@ -26,6 +26,7 @@
 		65C579051FBE12C5009183E4 /* InstahamUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C579041FBE12C5009183E4 /* InstahamUITests.m */; };
 		65C5792E1FBE192F009183E4 /* Instagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5792D1FBE192F009183E4 /* Instagram.m */; };
 		65E4B4A51FC1659E00AE9BB0 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */; };
+		65E4B4A71FC16F3C00AE9BB0 /* ConversionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E4B4A61FC16F3C00AE9BB0 /* ConversionTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		65C5792D1FBE192F009183E4 /* Instagram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instagram.m; sourceTree = "<group>"; };
 		65E4B4A31FC1659E00AE9BB0 /* CommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
 		65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		65E4B4A61FC16F3C00AE9BB0 /* ConversionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversionTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				65C578F91FBE12C5009183E4 /* InstahamTests.m */,
 				6570A1111FBE23770062E458 /* InstagramTests.m */,
 				6570A11B1FC103150062E458 /* KeychainTests.m */,
+				65E4B4A61FC16F3C00AE9BB0 /* ConversionTests.m */,
 				65C578FB1FBE12C5009183E4 /* Info.plist */,
 			);
 			path = InstahamTests;
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6570A1121FBE23770062E458 /* InstagramTests.m in Sources */,
+				65E4B4A71FC16F3C00AE9BB0 /* ConversionTests.m in Sources */,
 				6570A11C1FC103150062E458 /* KeychainTests.m in Sources */,
 				65C578FA1FBE12C5009183E4 /* InstahamTests.m in Sources */,
 			);
