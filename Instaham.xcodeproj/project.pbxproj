@@ -15,6 +15,10 @@
 		6570A1231FC123D30062E458 /* Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1221FC123D30062E458 /* Conversion.m */; };
 		6570A1261FC136BD0062E458 /* InstagramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1251FC136BD0062E458 /* InstagramCell.m */; };
 		6570A12A1FC13B060062E458 /* UIImageView+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570A1291FC13B060062E458 /* UIImageView+URL.m */; };
+		65AA42A91FC2870C006AA615 /* InstagramPost+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA42A21FC2870C006AA615 /* InstagramPost+CoreDataClass.m */; };
+		65AA42AA1FC2870C006AA615 /* InstagramPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA42A41FC2870C006AA615 /* InstagramPost+CoreDataProperties.m */; };
+		65AA42AB1FC2870C006AA615 /* InstagramComment+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA42A61FC2870C006AA615 /* InstagramComment+CoreDataClass.m */; };
+		65AA42AC1FC2870C006AA615 /* InstagramComment+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA42A81FC2870C006AA615 /* InstagramComment+CoreDataProperties.m */; };
 		65C578DF1FBE12C5009183E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578DE1FBE12C5009183E4 /* AppDelegate.m */; };
 		65C578E21FBE12C5009183E4 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578E11FBE12C5009183E4 /* FeedViewController.m */; };
 		65C578E51FBE12C5009183E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C578E31FBE12C5009183E4 /* Main.storyboard */; };
@@ -61,6 +65,14 @@
 		6570A1251FC136BD0062E458 /* InstagramCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramCell.m; sourceTree = "<group>"; };
 		6570A1281FC13B060062E458 /* UIImageView+URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
 		6570A1291FC13B060062E458 /* UIImageView+URL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URL.m"; sourceTree = "<group>"; };
+		65AA42A11FC2870C006AA615 /* InstagramPost+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstagramPost+CoreDataClass.h"; sourceTree = "<group>"; };
+		65AA42A21FC2870C006AA615 /* InstagramPost+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "InstagramPost+CoreDataClass.m"; sourceTree = "<group>"; };
+		65AA42A31FC2870C006AA615 /* InstagramPost+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstagramPost+CoreDataProperties.h"; sourceTree = "<group>"; };
+		65AA42A41FC2870C006AA615 /* InstagramPost+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "InstagramPost+CoreDataProperties.m"; sourceTree = "<group>"; };
+		65AA42A51FC2870C006AA615 /* InstagramComment+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstagramComment+CoreDataClass.h"; sourceTree = "<group>"; };
+		65AA42A61FC2870C006AA615 /* InstagramComment+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "InstagramComment+CoreDataClass.m"; sourceTree = "<group>"; };
+		65AA42A71FC2870C006AA615 /* InstagramComment+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstagramComment+CoreDataProperties.h"; sourceTree = "<group>"; };
+		65AA42A81FC2870C006AA615 /* InstagramComment+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "InstagramComment+CoreDataProperties.m"; sourceTree = "<group>"; };
 		65C578DA1FBE12C5009183E4 /* Instaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C578DD1FBE12C5009183E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65C578DE1FBE12C5009183E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +151,44 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
+		659184A31FC282F000937793 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65AA42AD1FC28F42006AA615 /* Cells */,
+				6570A1141FC0F0CF0062E458 /* InstagramAuthViewController.h */,
+				6570A1151FC0F0CF0062E458 /* InstagramAuthViewController.m */,
+				65C578E01FBE12C5009183E4 /* FeedViewController.h */,
+				65C578E11FBE12C5009183E4 /* FeedViewController.m */,
+				65E4B4A31FC1659E00AE9BB0 /* CommentViewController.h */,
+				65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		65AA42AD1FC28F42006AA615 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6570A1241FC136BD0062E458 /* InstagramCell.h */,
+				6570A1251FC136BD0062E458 /* InstagramCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		65AA42AE1FC28F52006AA615 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				65AA42A11FC2870C006AA615 /* InstagramPost+CoreDataClass.h */,
+				65AA42A21FC2870C006AA615 /* InstagramPost+CoreDataClass.m */,
+				65AA42A31FC2870C006AA615 /* InstagramPost+CoreDataProperties.h */,
+				65AA42A41FC2870C006AA615 /* InstagramPost+CoreDataProperties.m */,
+				65AA42A51FC2870C006AA615 /* InstagramComment+CoreDataClass.h */,
+				65AA42A61FC2870C006AA615 /* InstagramComment+CoreDataClass.m */,
+				65AA42A71FC2870C006AA615 /* InstagramComment+CoreDataProperties.h */,
+				65AA42A81FC2870C006AA615 /* InstagramComment+CoreDataProperties.m */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
 		65C578D11FBE12C5009183E4 = {
 			isa = PBXGroup;
 			children = (
@@ -162,18 +212,14 @@
 		65C578DC1FBE12C5009183E4 /* Instaham */ = {
 			isa = PBXGroup;
 			children = (
+				65AA42AE1FC28F52006AA615 /* Data Models */,
 				6570A1271FC13AE30062E458 /* Controls */,
 				6570A11D1FC117BC0062E458 /* Utilities */,
 				6570A1171FC0FDAD0062E458 /* Keychain */,
 				65C5792B1FBE190D009183E4 /* Networking */,
+				659184A31FC282F000937793 /* Controllers */,
 				65C578DD1FBE12C5009183E4 /* AppDelegate.h */,
 				65C578DE1FBE12C5009183E4 /* AppDelegate.m */,
-				65C578E01FBE12C5009183E4 /* FeedViewController.h */,
-				65C578E11FBE12C5009183E4 /* FeedViewController.m */,
-				65E4B4A31FC1659E00AE9BB0 /* CommentViewController.h */,
-				65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */,
-				6570A1241FC136BD0062E458 /* InstagramCell.h */,
-				6570A1251FC136BD0062E458 /* InstagramCell.m */,
 				65C578E31FBE12C5009183E4 /* Main.storyboard */,
 				65C578E91FBE12C5009183E4 /* Assets.xcassets */,
 				65C578EB1FBE12C5009183E4 /* LaunchScreen.storyboard */,
@@ -209,8 +255,6 @@
 			children = (
 				65C5792C1FBE192F009183E4 /* Instagram.h */,
 				65C5792D1FBE192F009183E4 /* Instagram.m */,
-				6570A1141FC0F0CF0062E458 /* InstagramAuthViewController.h */,
-				6570A1151FC0F0CF0062E458 /* InstagramAuthViewController.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -350,14 +394,18 @@
 			files = (
 				65E4B4A51FC1659E00AE9BB0 /* CommentViewController.m in Sources */,
 				6570A12A1FC13B060062E458 /* UIImageView+URL.m in Sources */,
+				65AA42AA1FC2870C006AA615 /* InstagramPost+CoreDataProperties.m in Sources */,
 				65C578E81FBE12C5009183E4 /* Instaham.xcdatamodeld in Sources */,
+				65AA42AC1FC2870C006AA615 /* InstagramComment+CoreDataProperties.m in Sources */,
 				6570A11A1FC0FDC50062E458 /* Keychain.m in Sources */,
+				65AA42AB1FC2870C006AA615 /* InstagramComment+CoreDataClass.m in Sources */,
 				6570A1261FC136BD0062E458 /* InstagramCell.m in Sources */,
 				65C578E21FBE12C5009183E4 /* FeedViewController.m in Sources */,
 				6570A1231FC123D30062E458 /* Conversion.m in Sources */,
 				65C578F01FBE12C5009183E4 /* main.m in Sources */,
 				6570A1161FC0F0CF0062E458 /* InstagramAuthViewController.m in Sources */,
 				65C578DF1FBE12C5009183E4 /* AppDelegate.m in Sources */,
+				65AA42A91FC2870C006AA615 /* InstagramPost+CoreDataClass.m in Sources */,
 				6570A1201FC118E30062E458 /* CoreData.m in Sources */,
 				65C5792E1FBE192F009183E4 /* Instagram.m in Sources */,
 			);

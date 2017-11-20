@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G1036" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="InstagramComment" representedClassName="InstagramComment" syncable="YES" codeGenerationType="class">
+    <entity name="InstagramComment" representedClassName="InstagramComment" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="commentID" attributeType="String" syncable="YES"/>
         <attribute name="profileImageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="postID" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InstagramPost" inverseName="comments" inverseEntity="InstagramPost" syncable="YES"/>
+        <relationship name="postID" maxCount="1" deletionRule="Nullify" destinationEntity="InstagramPost" inverseName="comments" inverseEntity="InstagramPost" syncable="YES"/>
     </entity>
-    <entity name="InstagramPost" representedClassName="InstagramPost" syncable="YES" codeGenerationType="class">
+    <entity name="InstagramPost" representedClassName="InstagramPost" syncable="YES">
         <attribute name="captionText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="commentCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,6 +21,6 @@
     </entity>
     <elements>
         <element name="InstagramComment" positionX="225" positionY="128" width="128" height="133"/>
-        <element name="InstagramPost" positionX="-18" positionY="-18" width="128" height="180"/>
+        <element name="InstagramPost" positionX="-18" positionY="-18" width="128" height="178"/>
     </elements>
 </model>

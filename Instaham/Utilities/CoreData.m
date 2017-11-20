@@ -16,11 +16,11 @@ static NSManagedObjectContext * __mainContext = nil;
 @implementation CoreData
 
 + (NSManagedObjectContext * _Nonnull)managedContext {
-    //if (__mainContext == nil) {
+    if (__mainContext == nil) {
         AppDelegate *appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
         __mainContext = appDelegate.persistentContainer.viewContext;
-        //[__mainContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
-    //}
+        [__mainContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
+    }
     return __mainContext;
 }
 

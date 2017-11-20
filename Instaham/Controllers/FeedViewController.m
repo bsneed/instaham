@@ -12,7 +12,10 @@
 #import "Instagram.h"
 #import "CoreData.h"
 #import "InstagramAuthViewController.h"
-#import "Instaham+CoreDataModel.h"
+//#import "Instaham+CoreDataModel.h"
+#import "InstagramPost+CoreDataProperties.h"
+#import "InstagramComment+CoreDataProperties.h"
+
 #import "InstagramCell.h"
 #import "UIImageView+URL.h"
 #import "Sanity.h"
@@ -33,6 +36,8 @@ static NSString *cellIdentifier = @"InstagramCell";
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"InstagramPost"];
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"postID" ascending:false]];
+    // make sure the 'comments' relationship is hydrated out of the gate.
+    request.relationshipKeyPathsForPrefetching = @[@"comments"];
     
     self.dataController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:CoreData.managedContext sectionNameKeyPath:nil cacheName:@"instaham.cache"];
     self.dataController.delegate = self;
@@ -86,15 +91,28 @@ static NSString *cellIdentifier = @"InstagramCell";
     [cell.urlImageView setImageWithURL:[NSURL URLWithString:post.imageURL]];
     [cell.profileIimageView setImageWithURL:[NSURL URLWithString:post.profileImageURL]];
     
-    NSUInteger dummy = post.comments.count;
-    NSLog(@"%lu", (unsigned long)dummy);
+    /**
+     Interesting thing here that made me pull out my hair.
+     
+     the payload returns a `commentsCount` value, which doesn't reflect the actual # of comments
+     that will come across via the comments enpoint.  This represents the total, however the
+     only content the comments endpoint will return is YOURS.
+     
+     "Get a list of recent comments on a media object.
+     The public_content scope is required for media that does not belong to the owner of the access_token."
+     
+     Ugh, bummer.  To get permissions for "public_content", the app has to be submitted to Instagram
+     for review.
+     */
     
-    if (post.commentCount > 0) {
+    NSUInteger commentCount = post.comments.count;
+    
+    if (commentCount > 0) {
         cell.commentButton.hidden = FALSE;
         
         NSString *commentString = @"1 Comment";
-        if (post.commentCount > 1) {
-            commentString = [NSString stringWithFormat:@"%d Comments", post.commentCount];
+        if (commentCount > 1) {
+            commentString = [NSString stringWithFormat:@"%lu Comments", commentCount];
         }
         [cell.commentButton setTitle:commentString forState:UIControlStateNormal];
         
@@ -109,8 +127,6 @@ static NSString *cellIdentifier = @"InstagramCell";
         cell.commentButton.hidden = TRUE;
         cell.commentAction = nil;
     }
-    
-    NSLog(@"%@", post);
 }
 
 #pragma mark - UITableViewDelegate

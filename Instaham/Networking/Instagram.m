@@ -13,7 +13,9 @@
 #import "Keychain.h"
 #import "Conversion.h"
 #import "CoreData.h"
-#import "Instaham+CoreDataModel.h"
+//#import "Instaham+CoreDataModel.h"
+#import "InstagramPost+CoreDataProperties.h"
+#import "InstagramComment+CoreDataProperties.h"
 #import "Sanity.h"
 
 static NSString * const kApiEndpoint = @"https://api.instagram.com/v1";
@@ -176,7 +178,7 @@ typedef void(^NetworkCompletion)(NSData * _Nullable data, NSHTTPURLResponse * _N
                         }
                     }
                 
-                    //[context save:&passedError];
+                    [context save:&passedError];
                 }
                 
                 dispatch_async(_commentQueue, ^{
@@ -215,18 +217,22 @@ typedef void(^NetworkCompletion)(NSData * _Nullable data, NSHTTPURLResponse * _N
                 if (payloadData != nil) {
                     for (NSDictionary *item in payloadData) {
                         InstagramComment *comment = [[InstagramComment alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
-                        comment.postID = post;
+                        //comment.postID = post;
                         comment.commentID = [item valueForKeyPath:@"id"];
                         comment.userName = [item valueForKeyPath:@"from.username"];
                         comment.profileImageURL = [item valueForKeyPath:@"from.profile_picture"];
                         comment.comment = [item valueForKeyPath:@"text"];
                         
-                        //post.comments = [post.comments setByAddingObject:comment];
+                        if ([post.captionText isEqualToString:@"Not my favorite song."]) {
+                            NSLog(@"boom");
+                        }
+                        
+                        [post addCommentsObject:comment];
                         
                         NSLog(@"%@", post);
                     }
                     
-                    //[context save:&passedError];
+                    [context save:&passedError];
                 }
             }
         } else {

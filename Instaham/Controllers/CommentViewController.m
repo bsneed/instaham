@@ -9,7 +9,9 @@
 #import "CommentViewController.h"
 #import "InstagramCell.h"
 #import "UIImageView+URL.h"
-#import "Instaham+CoreDataModel.h"
+//#import "Instaham+CoreDataModel.h"
+#import "InstagramPost+CoreDataProperties.h"
+#import "InstagramComment+CoreDataProperties.h"
 #import "CoreData.h"
 
 static NSString *headerCellIdentifier = @"InstagramCell";
@@ -40,7 +42,7 @@ static NSString *headerCellIdentifier = @"InstagramCell";
     _post = post;
     
     InstagramComment *comment = _post.comments.anyObject;
-    NSLog(@"%@", comment);
+    NSLog(@"%@", comment.comment);
     
     NSLog(@"comments: %@", [_post.comments.anyObject comment]);
     
@@ -62,10 +64,10 @@ static NSString *headerCellIdentifier = @"InstagramCell";
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 && indexPath.section == 0) {
         return 468;
     }
-    return 43;
+    return 60;
 }
 
 #pragma mark - UITableViewDataSource
@@ -79,7 +81,9 @@ static NSString *headerCellIdentifier = @"InstagramCell";
     } else if (indexPath.section == 1) {
         UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"commentCell"];
         NSArray<InstagramComment *> *comments = self.post.comments.allObjects;
-        cell.textLabel.text = comments[indexPath.row].comment;
+        InstagramComment *comment = comments[indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"@%@", comment.userName];
+        cell.detailTextLabel.text = comment.comment;
         result = cell;
     }
     return result;
@@ -96,7 +100,7 @@ static NSString *headerCellIdentifier = @"InstagramCell";
     if (section == 0) {
         result = 1;
     } else if (section == 1) {
-        result = self.post.comments.allObjects.count;
+        result = self.post.comments.count;
     }
     return result;
 }
