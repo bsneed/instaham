@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "Instagram.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +21,6 @@
     NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:cache];
     
-    [Instagram setToken:nil];
     return YES;
 }
 
