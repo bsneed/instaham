@@ -40,7 +40,7 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    // NSLog(@"%@", request.URL.host);
+    NSLog(@"webview loading: %@", request.URL);
     // handles the redirects of api.instagram.com to www.instagram.com.
     // so long as it's on instagram.com, i'm good.
     if ([request.URL.host containsString:@"instagram.com"]) {

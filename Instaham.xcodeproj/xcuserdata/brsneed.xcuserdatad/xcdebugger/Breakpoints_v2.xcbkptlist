@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instaham/Networking/Instagram.m"
-            timestampString = "532844736.34438"
+            timestampString = "532894366.658084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "166"
@@ -52,7 +52,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instaham/Networking/Instagram.m"
-            timestampString = "532844736.344438"
+            timestampString = "532894366.658142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "227"
@@ -68,12 +68,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instaham/Networking/Instagram.m"
-            timestampString = "532844736.34449"
+            timestampString = "532894366.658184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
             endingLineNumber = "204"
             landmarkName = "-commentsForPost:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Instaham/Controllers/InstagramAuthViewController.m"
+            timestampString = "532894366.658227"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-webView:shouldStartLoadWithRequest:navigationType:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

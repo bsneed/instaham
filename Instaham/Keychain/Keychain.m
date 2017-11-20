@@ -27,6 +27,7 @@
     status = SecItemCopyMatching((__bridge CFDictionaryRef)query, (CFTypeRef *)&resultData);
     
     if (status != noErr) {
+        NSLog(@"Reading the keychain failed (code %d)", (int)status);
         return nil;
     }
     
@@ -51,12 +52,20 @@
         if ([Keychain stringForKey:key serviceName:serviceName]) {
             // it exists already, so just update it.
             NSDictionary *update = [NSDictionary dictionaryWithObject:stringData forKey:(__bridge id)kSecValueData];
-            return (SecItemUpdate((__bridge CFDictionaryRef)spec, (__bridge CFDictionaryRef)update) == noErr);
+            OSStatus status = SecItemUpdate((__bridge CFDictionaryRef)spec, (__bridge CFDictionaryRef)update);
+            if (status != noErr) {
+                NSLog(@"Reading the keychain failed (code %d)", (int)status);
+            }
+            return (status == noErr);
         } else {
             // it doesn't exist, so add it.
             NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:spec];
             [data setObject:stringData forKey:(__bridge id)kSecValueData];
-            return (SecItemAdd((__bridge CFDictionaryRef)data, NULL) == noErr);
+            OSStatus status = SecItemAdd((__bridge CFDictionaryRef)data, NULL);
+            if (status != noErr) {
+                NSLog(@"Reading the keychain failed (code %d)", (int)status);
+            }
+            return (status == noErr);
         }
     }
 }
