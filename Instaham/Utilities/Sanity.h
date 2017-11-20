@@ -14,13 +14,11 @@
  */
 
 #define weakify(var) \
-    try {} @finally {} \
     __weak typeof(var) self_weak_##var = var;
 
 #define strongify(var) \
     _Pragma("clang diagnostic push") \
     _Pragma("clang diagnostic ignored \"-Wshadow\"") \
-    try {} @finally {} \
     __strong typeof(var) var = self_weak_##var; \
     _Pragma("clang diagnostic pop")
 

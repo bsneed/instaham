@@ -22,7 +22,6 @@
 		65C578EA1FBE12C5009183E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C578E91FBE12C5009183E4 /* Assets.xcassets */; };
 		65C578ED1FBE12C5009183E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C578EB1FBE12C5009183E4 /* LaunchScreen.storyboard */; };
 		65C578F01FBE12C5009183E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578EF1FBE12C5009183E4 /* main.m */; };
-		65C578FA1FBE12C5009183E4 /* InstahamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C578F91FBE12C5009183E4 /* InstahamTests.m */; };
 		65C579051FBE12C5009183E4 /* InstahamUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C579041FBE12C5009183E4 /* InstahamUITests.m */; };
 		65C5792E1FBE192F009183E4 /* Instagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5792D1FBE192F009183E4 /* Instagram.m */; };
 		65E4B4A51FC1659E00AE9BB0 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E4B4A41FC1659E00AE9BB0 /* CommentViewController.m */; };
@@ -74,7 +73,6 @@
 		65C578EE1FBE12C5009183E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65C578EF1FBE12C5009183E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65C578F51FBE12C5009183E4 /* InstahamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstahamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65C578F91FBE12C5009183E4 /* InstahamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstahamTests.m; sourceTree = "<group>"; };
 		65C578FB1FBE12C5009183E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65C579001FBE12C5009183E4 /* InstahamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstahamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C579041FBE12C5009183E4 /* InstahamUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstahamUITests.m; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 		65C578F81FBE12C5009183E4 /* InstahamTests */ = {
 			isa = PBXGroup;
 			children = (
-				65C578F91FBE12C5009183E4 /* InstahamTests.m */,
 				6570A1111FBE23770062E458 /* InstagramTests.m */,
 				6570A11B1FC103150062E458 /* KeychainTests.m */,
 				65E4B4A61FC16F3C00AE9BB0 /* ConversionTests.m */,
@@ -373,7 +370,6 @@
 				6570A1121FBE23770062E458 /* InstagramTests.m in Sources */,
 				65E4B4A71FC16F3C00AE9BB0 /* ConversionTests.m in Sources */,
 				6570A11C1FC103150062E458 /* KeychainTests.m in Sources */,
-				65C578FA1FBE12C5009183E4 /* InstahamTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

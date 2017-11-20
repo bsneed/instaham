@@ -39,9 +39,9 @@ static NSString *cellIdentifier = @"InstagramCell";
     [self.dataController performFetch:nil];
     
     // start the loading process the next time the run loop comes around.
-    @weakify(self);
+    weakify(self);
     dispatch_async(dispatch_get_main_queue(), ^{
-        @strongify(self);
+        strongify(self);
         [self loadContent];
     });
 }
@@ -60,17 +60,21 @@ static NSString *cellIdentifier = @"InstagramCell";
          yes, this comes with the risk that the user fails to get a token AND
          can't get out of the webview since there's no "Close" button on the auth controller.
          */
-        @weakify(self);
+        weakify(self);
         authController.tokenCompletion = ^{
-            @strongify(self);
+            strongify(self);
             // jump back in to load content now that we have a token.
             [self loadContent];
         };
         [self presentViewController:authController animated:TRUE completion:nil];
     }
     
+    [self.instagram recentForUserWithCompletion:nil];
+}
+
+- (IBAction)refresh:(id)sender {
     [self.instagram recentForUserWithCompletion:^(NSError * _Nullable error) {
-        //
+        [sender endRefreshing];
     }];
 }
 
@@ -82,6 +86,9 @@ static NSString *cellIdentifier = @"InstagramCell";
     [cell.urlImageView setImageWithURL:[NSURL URLWithString:post.imageURL]];
     [cell.profileIimageView setImageWithURL:[NSURL URLWithString:post.profileImageURL]];
     
+    NSUInteger dummy = post.comments.count;
+    NSLog(@"%lu", (unsigned long)dummy);
+    
     if (post.commentCount > 0) {
         cell.commentButton.hidden = FALSE;
         
@@ -91,10 +98,10 @@ static NSString *cellIdentifier = @"InstagramCell";
         }
         [cell.commentButton setTitle:commentString forState:UIControlStateNormal];
         
-        @weakify(self);
+        weakify(self);
         cell.commentAction = ^{
-            @strongify(self);
-            CommentViewController *controller = [[CommentViewController alloc] init];
+            strongify(self);
+            CommentViewController *controller = [CommentViewController fromStoryboard];
             controller.post = post;
             [self.navigationController pushViewController:controller animated:TRUE];
         };
@@ -102,6 +109,8 @@ static NSString *cellIdentifier = @"InstagramCell";
         cell.commentButton.hidden = TRUE;
         cell.commentAction = nil;
     }
+    
+    NSLog(@"%@", post);
 }
 
 #pragma mark - UITableViewDelegate

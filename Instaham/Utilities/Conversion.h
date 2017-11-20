@@ -12,7 +12,7 @@
 
 /**
  These extensions make fishing things out of dictionaries a little safer, and reduces
- the number of 'if' statements necessar.
+ the number of 'if' statements necessary.
  */
 
 - (NSNumber * _Nullable)numberValue;

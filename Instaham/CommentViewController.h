@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Instaham+CoreDataModel.h"
+
+@class InstagramPost;
 
 @interface CommentViewController : UITableViewController
 
-@property (nonatomic, retain) InstagramPost *post;
+@property (nonatomic, retain) InstagramPost * _Nullable post;
+
++ (CommentViewController * _Nonnull)fromStoryboard;
 
 @end

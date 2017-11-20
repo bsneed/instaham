@@ -21,6 +21,6 @@
     </entity>
     <elements>
         <element name="InstagramComment" positionX="225" positionY="128" width="128" height="133"/>
-        <element name="InstagramPost" positionX="-18" positionY="-18" width="128" height="178"/>
+        <element name="InstagramPost" positionX="-18" positionY="-18" width="128" height="180"/>
     </elements>
 </model>

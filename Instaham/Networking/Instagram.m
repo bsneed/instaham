@@ -138,9 +138,9 @@ typedef void(^NetworkCompletion)(NSData * _Nullable data, NSHTTPURLResponse * _N
 #pragma mark - Instagram functionality
 
 - (void)recentForUserWithCompletion:(ServiceCompletion _Nullable)completion {
-    @weakify(self);
+    weakify(self);
     [self callPath:@"users/self/media/recent" params:nil completion:^(NSData * _Nullable data, NSHTTPURLResponse * _Nullable response, NSError * _Nullable error) {
-        @strongify(self);
+        strongify(self);
         NSError *passedError = error;
         
         if (response.statusCode == 200 || response == nil) {
@@ -176,15 +176,17 @@ typedef void(^NetworkCompletion)(NSData * _Nullable data, NSHTTPURLResponse * _N
                         }
                     }
                 
-                    [context save:&passedError];
+                    //[context save:&passedError];
                 }
                 
                 dispatch_async(_commentQueue, ^{
                     // tell it to do something after all the comments are fetched...
+                    dispatch_sync(dispatch_get_main_queue(), ^{
+                        NSError *error = nil;
+                        [[CoreData managedContext] save:&error];
+                    });
                 });
             }
-            
-            NSLog(@"got some data");
         } else {
             
         }
@@ -218,13 +220,15 @@ typedef void(^NetworkCompletion)(NSData * _Nullable data, NSHTTPURLResponse * _N
                         comment.userName = [item valueForKeyPath:@"from.username"];
                         comment.profileImageURL = [item valueForKeyPath:@"from.profile_picture"];
                         comment.comment = [item valueForKeyPath:@"text"];
+                        
+                        //post.comments = [post.comments setByAddingObject:comment];
+                        
+                        NSLog(@"%@", post);
                     }
                     
-                    [context save:&passedError];
+                    //[context save:&passedError];
                 }
             }
-            
-            NSLog(@"got some data");
         } else {
             
         }

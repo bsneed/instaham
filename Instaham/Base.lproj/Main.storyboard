@@ -12,7 +12,7 @@
         <!--Instaham-->
         <scene sceneID="nGa-SN-sDy">
             <objects>
-                <tableViewController id="9PX-GJ-X7d" customClass="FeedViewController" sceneMemberID="viewController">
+                <tableViewController title="Instaham" id="9PX-GJ-X7d" customClass="FeedViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XkO-4q-LgF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +79,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Instaham" id="yeY-7y-m7O"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="afO-f0-Em9">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="9PX-GJ-X7d" eventType="valueChanged" id="kV0-F4-fZn"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kc4-gm-VkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,13 +93,13 @@
         <!--Comments-->
         <scene sceneID="aQQ-nM-z4h">
             <objects>
-                <tableViewController id="pyh-OE-enP" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommentViewController" title="Comments" id="pyh-OE-enP" customClass="CommentViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uv9-CT-nCl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="468" id="hee-VN-QWD" customClass="InstagramCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstagramCell" rowHeight="468" id="hee-VN-QWD" customClass="InstagramCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="468"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hee-VN-QWD" id="WTw-hR-NAM">
@@ -124,6 +130,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="likesLabel" destination="3fK-sW-5JM" id="jmX-N1-731"/>
+                                    <outlet property="profileIimageView" destination="ExQ-Al-UDM" id="DgR-3e-D6u"/>
+                                    <outlet property="urlImageView" destination="teM-rt-8xP" id="lr4-hC-MG9"/>
+                                    <outlet property="usernameLabel" destination="7EU-cz-Me3" id="4fZ-yn-7xB"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="43" id="1WA-Fi-UAm">
                                 <rect key="frame" x="0.0" y="496" width="375" height="43"/>
