@@ -13,7 +13,7 @@ This may not work the way you might expect.  Instagram changed their policies so
 
 `The public_content scope is required for media that does not belong to the owner of the access_token.`
 
-This goes for comments, images, etc.  So unless you comment on your own posts, you may not see them.
+This goes for comments, images, etc.  So unless you comment on your own posts, you may not see them.  This had me pulling out my hair for most of the day today until I realized it was happening :(
 
 Thanks for reading!
 
